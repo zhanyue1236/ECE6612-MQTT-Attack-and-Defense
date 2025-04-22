@@ -3,7 +3,7 @@
 This project demonstrates a security analysis of the MQTT protocol, including both offensive and defensive techniques. Specifically, we implement:
 
 - **MQTT sniffing and spoofing attacks**
-- **Cryptographic defense using RSA + SHA-256 signatures**
+- **Cryptographic defense using  digital signatures**
 
 ## Overview
 
@@ -11,7 +11,6 @@ MQTT is a lightweight publish-subscribe protocol widely used in IoT environments
 
 This project simulates these vulnerabilities and implements a **digital signature-based defense mechanism** to ensure message integrity and authenticity.
 
----
 
 ## Attack Module
 
@@ -26,7 +25,6 @@ We demonstrate the following:
 - Attacker injects: `Temperature = 67`
 - Subscriber sees both — the attack succeeds.
 
----
 
 ## Defense Module
 
@@ -41,6 +39,3 @@ To defend against such attacks, we introduce:
 *Effect:*  
 Even if an attacker captures a packet, they **cannot generate a valid signature** for a forged message — the spoofed data is rejected.
 
----
-
-## Project Structure
